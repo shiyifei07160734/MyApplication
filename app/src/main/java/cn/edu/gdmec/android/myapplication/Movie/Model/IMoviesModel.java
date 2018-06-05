@@ -5,7 +5,6 @@ package cn.edu.gdmec.android.myapplication.Movie.Model;
  */
 
 public interface IMoviesModel {
-    void loadMovies(String movie,
-                  String type,
+    void loadMovies(String total,
                   IOnLoadListener iOnLoadListener);
 }

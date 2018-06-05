@@ -1,6 +1,6 @@
 package cn.edu.gdmec.android.myapplication.Movie.Presenter;
 
-import cn.edu.gdmec.android.myapplication.Bean.MovieBean;
+import cn.edu.gdmec.android.myapplication.Bean.MoviesBean;
 import cn.edu.gdmec.android.myapplication.Movie.Model.IMoviesModel;
 import cn.edu.gdmec.android.myapplication.Movie.Model.IOnLoadListener;
 import cn.edu.gdmec.android.myapplication.Movie.Model.MoviesModel;
@@ -21,7 +21,7 @@ public class MoviesPresenter implements IMoviesPresenter,IOnLoadListener {
     }
 
     @Override
-    public void success(MovieBean movieBean) {
+    public void success(MoviesBean movieBean) {
 
         iMoviesView.hideDialog();
         if (movieBean!=null){
@@ -36,8 +36,8 @@ public class MoviesPresenter implements IMoviesPresenter,IOnLoadListener {
     }
 
     @Override
-    public void loadMovies(String movie, String type) {
+    public void loadMovies(String total) {
         iMoviesView.showDialog();
-        iMoviesModel.loadMovies(movie,type,this);
+        iMoviesModel.loadMovies(total,this);
     }
 }
