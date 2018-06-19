@@ -16,11 +16,12 @@ import rx.Observable;
  */
 
 public interface RetrofitService {
-
+//http://c.m.163.com/nc/article/headline/T1348647909107/20-20.html
     @GET("nc/article/{type}/{id}/{startPage}-20.html")
     Observable<NewsBean> getNews(@Path("type") String type,
                                  @Path("id") String id,
                                  @Path("startPage") int startPage);
+    //https://api.douban.com/v2/movie/in_theaters?start=20
     @GET("/v2/movie/{total}")
     Observable<MoviesBean> getMovies(@Path("total") String total);
     @GET("news/feed/v51")
